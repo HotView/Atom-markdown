@@ -1,0 +1,47 @@
+## imread
+cv2.imread(filename , flags)
+flags的参数说明：
+- IMREAD_ANYCOLOR = 4
+- IMREAD_ANYDEPTH = 2
+- IMREAD_COLOR = 1
+- IMREAD_GRAYSCALE= 0
+- IMREAD_LOAD_GDAL = 8
+- IMREAD_UNCHANGED = -1
+## 色彩空间
+- RGB：常见
+- HSV：HSV即色相，饱和度，明度。常见H:0-180 S:0-255 C:0-255，某一个颜色出现在特征物体时，可以考虑使用这个。
+inrange提取颜色，适用于==颜色物体的跟踪很有用！==
+![enter image description here](https://img-blog.csdn.net/20160526140204634?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)
+- HIS：强度和饱和度
+- YCrCb：肤色检测
+- YUV：常见（arduino开发）
+默认通道是BGR（blue，green，red）。
+（matplot是RGB）
+## 通道操作
+b , g , r  = cv2.split( image )  
+cv2.merge( [ b , g , r ] )
+## imwrite
+`cv2.imwrite(filename，object)`
+## copy（）
+`img_copy= img.copy()`：用来复制图像。
+## raw bytes
+```
+class bytearray(object)
+ |  bytearray(iterable_of_ints) -> bytearray
+ |  bytearray(string, encoding[, errors]) -> bytearray
+ |  bytearray(bytes_or_buffer) -> mutable copy of bytes_or_buffer
+ |  bytearray(int) -> bytes array of size given by the parameter initialized with null bytes
+ |  bytearray() -> empty bytes array
+ |  
+ |  Construct a mutable bytearray object from:
+ |    - an iterable yielding integers in range(256)
+ |    - a text string encoded using the specified encoding
+ |    - a bytes or a buffer object
+ |    - any object implementing the buffer API.
+ |    - an integer
+```
+> Written with [StackEdit](https://stackedit.io/).
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTMwMzgzMzgzMSwxNTE4MjExMjAxLDIyNT
+U4NTM4OSw4Mjc3OTYyOTFdfQ==
+-->
