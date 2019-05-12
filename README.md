@@ -1,4 +1,4 @@
-==python中是用Numpy来实现的。==# my_stackedit
+# my_stackedit
 同步存储我的md在线编辑的文件
 
 ## 使用方法
