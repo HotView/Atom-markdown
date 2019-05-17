@@ -1,9 +1,10 @@
 我们常常需要用两个或多个函数完成相同的任务，但其参数的类型不同。
 
-函数重载允许一个程序中的若干函数使用相同的名称，只要他们的参数列表不同即可。
+函数重载允许一个程序中的若干函数使用相同的名称，只要他们的参数列表不同即可。即==函数重载要求函数具有不同的签名==。
 
-==符号修饰或符号改编==
-
+## 函数签名
+- 函数名
+- 参数的个数，数据类型和顺序
 ## 重载和指针参数
 指向不同类型的指针是不同的，因此下面的原型声明了不同的重载函数
 ```c
@@ -59,25 +60,27 @@ void function(const TYPE& Var); //引用参数在函数内为常量不可变
 -   `const`声明时，在符号表中放入常量
 -   编译过程中发现常量直接以符号表中的值替换（常量折叠）
 -   编译过程中也可能为对应的常量分配存储空间：
-    
+
     -   `const`用在全局或者使用了`static`关键字说明，存放在只读数据区
-        
+
         ```
         extern const int i = 10;
         static const int i = 10;
-        
+
         // 或者修饰全局变量
         const int a =10;
         int main()
         {}
         ```
-        
+
     -   局部变量中对`const`常量使用了`&`操作符，在栈区分配空间
 
 > 注意：C++编译器虽然可能为`const`常量分配空间，但不会使用其存储空间中的值
-> 
+>
 > 符号表是编译过程中产生的一种数据结构
-> Written with [StackEdit](https://stackedit.io/).
+>
+
+Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
 eyJoaXN0b3J5IjpbLTM3NzYzNjM5LDE3NzM2NjY4MDIsNTk1ND
 IxMDgsMTQ1MzQzMzQ2MF19
