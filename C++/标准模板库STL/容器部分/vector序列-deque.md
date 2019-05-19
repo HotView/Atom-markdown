@@ -12,6 +12,10 @@
 - push_back
 - pop_front
 - pop_back
+
+## 两者的迭代器
+- vector，deque 的迭代器都是是一个Random Access Iterator。
+- 支持算术运算，所以也支持索引操作。
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
 eyJoaXN0b3J5IjpbLTMzMzA1OTUwMF19
