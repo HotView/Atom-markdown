@@ -1,6 +1,9 @@
 ![enter image description here](https://github.com/HotView/Images/raw/master/TIM%E6%88%AA%E5%9B%BE20190226213043.png)
 Add file：从Untracked到Staged状态。
 Commit：commit之后文件又变为Unmodified。
+
+git中三棵树的模型
+![](picture/basic-9db14223.png)
 ## 状态
 ==绿色表示可被提交的状态==
 git status -s：显示所有的staged的状态
