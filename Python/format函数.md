@@ -1,4 +1,5 @@
 ## 修改__str__方法
+花括号定义了与参数对应的打印字段，占位符的作用。
 `return "({},{})".format(self.accountName,self.balance)`
 
 
