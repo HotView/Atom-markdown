@@ -1,6 +1,5 @@
-==const参数修饰符==
-==参数加const表示不会修改到参考本身的值==
-## const关键字
+const主要是解决reference中，为了不改变原变量的值，而设计出的一种性能，使得参数传递中不用拷贝传递，节省大量时间，又防止了对于原变量的修改，使得原变量只能被读取！
+## const关键字的变量
 常类型是指使用类型修饰符const说明明的类型，常类型的变量或者对象的值是不能被更新的。不管出现在任何上下文都是为了这个目的而服务的。
 ## const参数
 const参数与非const参数的唯一区别是为（引用定义参数），还是为指针定义参数。
@@ -28,9 +27,9 @@ class Box
 ```c
 double Box::volume()const
 {
-	return length*width*height;	
+	return length*width*height;
 }
-``` 
+```
 #### cons函数成员
 把函数成员声明为const，会影响函数的签名。也就是说，可以通过添加函数的const版本来重载函数。
 const对象的数据成员一般不能被修改。如果人们希望修改const对象的类成员，为此，可以把这种成员指定为mutable例如
