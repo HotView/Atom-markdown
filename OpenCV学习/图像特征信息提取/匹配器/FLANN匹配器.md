@@ -1,5 +1,31 @@
 ## FLANN匹配
 Fast Library for Approximate Nearest Neighbors : 近似最近邻的快速库
+#### 参数设置
+匹配器有两个参数：indexParams和searchParams。
+两个参数以字典的形式在python中传递（C++以结构体进行传递），为了计算匹配，FLANN内部会决定如何处理索引和搜索对象。
+indexParams有五种算法：
+- LinearIndexParams：0
+- KDTreeIndexParams：1
+- KMeansIndexParams：2
+- CompositeIndexParams：3
+- KDTree_singleIndexParams：4
+- HierarchicalIndexParams:5
+- LshIndexParams：6
+- SavedIndexParams:254
+- AutotunedIndexParams：255
+>LINEAR = 0,
+  KDTREE = 1,
+  KMEANS = 2,
+  COMPOSITE = 3,
+  KDTREE_SINGLE = 4,
+  SAVED = 254,
+  AUTOTUNED = 255
+
+以上每种算法对应不同的配置，详见OpenCV文档。
+
+searchParams：
+用它来指定递归遍历的次数。值越高
+结果越准确，但是消耗的时间也越多。
 #### 针对SIFT和SURF的参数设置
 flann = cv2.FlannBasedMatcher(indexParams,searchParams)
 参数：索引类型
@@ -28,6 +54,7 @@ unsigned int multi_probe_level );
 
 示例
 ```py
+FLANN_INDEX_LSH = 6
 index_params = dict(algorithm = FLANN_INDEX_LSH,
     table_number = 6, # 12
     key_size = 12,  # 20

@@ -1,8 +1,9 @@
-SURF是OpenCV的一个类，了解这一点很重要，SURF采用Hessian算法检测关键点，而SURF采取DOG算法提取关键点，相对来说SIFT取得更加精确的定位，但是它的计算效率很低。
+SURF是OpenCV的一个类，了解这一点很重要，SURF采用Hessian算法检测关键点，而SIFT采取DOG算法提取关键点，相对来说SIFT取得更加精确的定位，但是它的计算效率很低。
 
 SURF算法是SIFT算法的加速版
 ## 原理
-使用64维向量来描述
+- 检测特征点：快速Hessian
+- 描述子：使用64维向量来描述
 ## 程序
 ```python
 surf = cv2.xfeatures2d.SURF_create(8000)  
