@@ -13,6 +13,9 @@
 - 接下来右键单击“Library Directories”选项，配置==静态链接库==的路径（..\build\x64\vc14\lib）点击ok，至此，OpenCV的头文件和静态链接库的路径配置完成
 - 接着依次点击“Linker”（链接器）--》"Input"（输入）---》“Additional Dependencies”（附加依赖项），lib库文件在\build\x64\vc14\lib下，文件名带“d”的lib库是debug模式，不带的是release模式。单击OK，至此，整个工程配置完成。
 
+==全局项目配置==：
+ - 菜单栏【视图】--》【属性管理器】，就会弹出一个属性管理器工作区
+ - 在弹出的工作区，展开【Debug/Win32】文件夹中，对【Microsoft.Cpp.Win32.userDirectories】进行右键属性操作，即可打开工程最通用的属性页面，然后按照上述的单个项目设置即可
 ## 附录
 为啥要配置附加依赖项
 - 库目录只是查找目录，类似环境变量PATH；具体用哪一个需要指明的，如果不在附加依赖项里填上，就需要在代码里用#pragma comment（lib, “xxx.lib”）来手动指定了。
