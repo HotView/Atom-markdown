@@ -1,29 +1,3 @@
-按照目的有三种：
-- 分类
-- 回归
-- 聚类
-## 按照目的划分
-#### 分类
-- 逻辑回归
-- Softmax回归
-- Factorization Machine
-- 支持向量机
-- 随机森林
-- BP神经网络
-#### 回归
-- 线性回归
-- 领回归和Lasso回归
-- CART树回归
-#### 聚类
-- K-means
-- Mean-Shift
-K-mean算法的k需要指定，Mean-Sift算法不需要指定类别个数K。
-主要应用在聚类，图像平滑，分割和视频跟踪。
-
-- DBSCAN
-
-- Label Propagation
-社区划分算法
 ## 按照学习类型划分
 #### 监督学习
 - 支持向量机
