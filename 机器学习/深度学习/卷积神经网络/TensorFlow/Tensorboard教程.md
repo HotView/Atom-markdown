@@ -1,5 +1,6 @@
 tensorboard的使用流程
 ## Scalar面板
+==常量的数据面板==
 水平轴有三个参考量
 - STEP：代表按照迭代次数
 - RELATIVE：代表按照训练集和测试集的相对值
@@ -7,6 +8,7 @@ tensorboard的使用流程
 
 其中面板还会绘制每一层的偏置(biases)和权重(weight),包括每次迭代中的最大值，最小值，平均值和标准差。
 ## Images面板
+==计算机视觉的图片面板==
 展示了训练集和测试集经过预处理后图片的样子
 ## Audio
 主要是音频数据的分析
@@ -26,3 +28,14 @@ tensorboard的使用流程
 - 创建tensorflow会话
 - 创建精灵图
 - 本地运行tensorboard程序
+## 示例1
+```py
+with tf.name_scope("layer"):
+    loss = tf.reduce_mean(tf.reduce_sum(tf.square(ys-prediction),reduction_induces = [1]))
+sess = tf.Session()
+writer = tf.train.SummaryWriter("logs/",sess.graph)
+```
+## 示例2
+可视化训练过程：Histograms。
+横轴为训练的步数的变化。
+把整个误差值显示出来：Events
